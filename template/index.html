@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML Stock_prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Stock Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="1st day closing price" placeholder="1st day closing price" required="required" />
+      <input type="text" name="2nd day closing price" placeholder="2nd day closing price" required="required" />
+		  <input type="text" name="3rd day closing price" placeholder="3rd day closing price" required="required" />
+		  <input type="text" name="4th day closing price" placeholder="4th day closing price" required="required" />
+		  <input type="text" name="5th day closing price" placeholder="5th day closing price" required="required" />
+		  <input type="text" name="6th day closing price" placeholder="6th day closing price" required="required" />
+      <input type="text" name="7th day closing price" placeholder="7th day closing price" required="required" />
+      <input type="text" name="8th day closing price" placeholder="8th day closing price" required="required" />
+      <input type="text" name="9th day closing price" placeholder="9th day closing price" required="required" />
+    <input type="text" name="10th day closing price" placeholder="10th day closing price" required="required" />
+    <input type="text" name="11th day closing price" placeholder="11th day closing price" required="required" />
+    <input type="text" name="12th day closing price" placeholder="12th day closing price" required="required" />
+    <input type="text" name="13th day closing price" placeholder="13th day closing price" required="required" />
+    <input type="text" name="14th day closing price" placeholder="14th day closing price" required="required" />
+    <input type="text" name="15th day closing price" placeholder="15th day closing price" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
